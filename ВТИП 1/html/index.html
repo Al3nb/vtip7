@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таймер запуска ракеты</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Таймер запуска ракеты</h1>
+        
+       
+        <div class="info-block">
+            <h2>Информация о запуске ракеты Falcon 9</h2>
+            <p>
+                Falcon 9 — это многоразовая ракета-носитель, разработанная компанией SpaceX Илона Маска. 
+                Она используется для доставки грузов и экипажей на Международную космическую станцию (МКС), 
+                а также для запуска спутников на орбиту. Первый успешный запуск Falcon 9 состоялся в 2010 году.
+            </p>
+            <p>
+                Сегодняшний запуск посвящён выводу на орбиту новой партии спутников Starlink для обеспечения 
+                глобального интернет-покрытия.
+            </p>
+        </div>
+
+        <!-- Управление таймером -->
+        <input type="number" id="timeInput" placeholder="Введите время в секундах">
+        <button id="startButton">Старт</button>
+        <button id="pauseButton" disabled>Пауза</button>
+        <div class="timer" id="timer">00:00</div>
+        <div class="message" id="message"></div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
