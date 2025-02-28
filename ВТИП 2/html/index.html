@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ввод данных о книгах</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+    <h1>Ввод данных о книгах</h1>
+    <form id="bookForm">
+        <label for="bookId">ID книги:</label>
+        <input type="text" id="bookId" name="bookId" required>
+
+        <label for="authorName">Имя автора:</label>
+        <input type="text" id="authorName" name="authorName" required>
+
+        <label for="bookTitle">Название книги:</label>
+        <input type="text" id="bookTitle" name="bookTitle" required>
+
+        <label for="publisher">Издательство:</label>
+        <input type="text" id="publisher" name="publisher" required>
+
+        <label for="pageCount">Количество страниц:</label>
+        <input type="number" id="pageCount" name="pageCount" required>
+
+        <button type="submit">Добавить книгу</button>
+        <button type="button" id="showBooks">Показать все книги</button>
+    </form>
+
+    <div id="bookList"></div>
+
+    <script id="book-template" type="text/x-handlebars-template">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Автор</th>
+                    <th>Название</th>
+                    <th>Издательство</th>
+                    <th>Страниц</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each this}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{author}}</td>
+                    <td>{{title}}</td>
+                    <td>{{publisher}}</td>
+                    <td>{{pages}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </script>
+</body>
+</html>
