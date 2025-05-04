@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Температурные показатели</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Температурные показатели</h1>
+    
+    <!-- Добавление новой записи -->
+    <div class="card">
+      <h2>Добавить новую запись</h2>
+      <form id="addForm">
+        <div class="form-group">
+          <label for="region">Регион:</label>
+          <input type="text" id="region" required>
+        </div>
+        <div class="form-group">
+          <label for="temperature">Температура (°C):</label>
+          <input type="number" id="temperature" step="0.1" required>
+        </div>
+        <div class="form-group">
+          <label for="precipitation">Количество осадков:</label>
+          <input type="number" id="precipitation" required>
+        </div>
+        <div class="form-group">
+          <label for="addDate">Дата:</label>
+          <input type="date" id="addDate" required>
+        </div>
+        <button type="submit">Добавить</button>
+      </form>
+    </div>
+    
+    <!-- Поиск минимальной температуры -->
+    <div class="card">
+      <h2>Поиск минимальной температуры</h2>
+      <div class="form-group">
+        <label for="dateInput">Выберите дату:</label>
+        <input type="date" id="dateInput">
+        <button onclick="getMinTemperature()">Найти минимум</button>
+      </div>
+      <div id="result" class="result-box"></div>
+    </div>
+    
+    <!-- Таблица с данными -->
+    <div class="card">
+      <h2>Все записи</h2>
+      <div class="table-container">
+        <table id="temperatureTable">
+          <thead>
+            <tr>
+              <th>Регион</th>
+              <th>Температура (°C)</th>
+              <th>Осадки</th>
+              <th>Дата</th>
+            </tr>
+          </thead>
+          <tbody id="temperatureData"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
