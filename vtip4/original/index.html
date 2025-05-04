@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Массив случайных чисел</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        .controls {
+            margin-bottom: 20px;
+        }
+        button {
+            margin-right: 10px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Массив случайных десятичных чисел</h1>
+    
+    <div class="controls">
+        <button id="generateBtn">Сгенерировать массив</button>
+        <button id="sortAscBtn">Сортировать по возрастанию</button>
+        <button id="sortDescBtn">Сортировать по убыванию</button>
+        
+        <div>
+            <label>Количество знаков после запятой:</label>
+            <input type="checkbox" id="decimal1" value="1"><label for="decimal1">1</label>
+            <input type="checkbox" id="decimal2" value="2"><label for="decimal2">2</label>
+            <input type="checkbox" id="decimal3" value="3" checked><label for="decimal3">3</label>
+            <input type="checkbox" id="decimal4" value="4"><label for="decimal4">4</label>
+        </div>
+    </div>
+    
+    <h2>Таблица 8x10:</h2>
+    <table id="numbersTable">
+        <tbody>
+            <!-- Таблица будет заполнена через JavaScript -->
+        </tbody>
+    </table>
+    
+    <div id="statusMessage"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 

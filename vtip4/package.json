@@ -1,0 +1,15 @@
+{
+  "name": "vtip4",
+  "version": "1.0.0",
+  "description": "Клиент-серверное приложение для работы с массивом случайных чисел",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

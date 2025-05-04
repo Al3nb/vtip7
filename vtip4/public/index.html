@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Массив случайных чисел</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        h1, h2, h3 {
+            color: #0056b3;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+        
+        table, th, td {
+            border: 1px solid #dee2e6;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        tr:hover {
+            background-color: #e6f7ff;
+        }
+        
+        .controls {
+            margin-bottom: 25px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        button {
+            margin-right: 10px;
+            padding: 8px 16px;
+            background-color: #0275d8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        button:active {
+            background-color: #004494;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        
+        label {
+            margin-right: 15px;
+        }
+        
+        .decimals-control {
+            margin-top: 15px;
+        }
+        
+        #statusMessage {
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 4px;
+            background-color: #e8f4fd;
+            border-left: 4px solid #0275d8;
+        }
+        
+        .server-info {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: white;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Массив случайных десятичных чисел</h1>
+    
+    <div class="controls">
+        <button id="generateBtn">Сгенерировать массив</button>
+        <button id="sortAscBtn">Сортировать по возрастанию</button>
+        <button id="sortDescBtn">Сортировать по убыванию</button>
+        
+        <div class="decimals-control">
+            <label>Количество знаков после запятой:</label>
+            <input type="checkbox" id="decimal1" value="1"><label for="decimal1">1</label>
+            <input type="checkbox" id="decimal2" value="2"><label for="decimal2">2</label>
+            <input type="checkbox" id="decimal3" value="3" checked><label for="decimal3">3</label>
+            <input type="checkbox" id="decimal4" value="4"><label for="decimal4">4</label>
+        </div>
+    </div>
+    
+    <h2>Таблица 8x10:</h2>
+    <table id="numbersTable">
+        <tbody></tbody>
+    </table>
+    
+    <div id="statusMessage"></div>
+  
+    
+    <script src="script.js"></script>
+</body>
+</html> 
