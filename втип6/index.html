@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Информация об артистах</title>
+  <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Информация об артистах</h1>
+    </header>
+    
+    <main>
+      <div class="form-group">
+        <label for="artistSelect">Выберите артиста:</label>
+        <select id="artistSelect">
+          <option value="">-- Выберите артиста --</option>
+        </select>
+      </div>
+      
+      <div class="btn-group">
+        <button id="loadInfo">Загрузить информацию</button>
+        <button id="loadBio">Загрузить биографию</button>
+        <button id="loadMedia">Загрузить фото и видео</button>
+      </div>
+      
+      <div id="artistInfo">
+        <div class="artist-details"></div>
+        <div class="artist-bio"></div>
+        <div class="artist-media"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Подключение JS напрямую -->
+  <script src="public/js/main.js"></script>
+</body>
+</html> 

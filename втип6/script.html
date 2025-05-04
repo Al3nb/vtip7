@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Script Loader</title>
+</head>
+<body>
+  <script>
+    // This file is used as a script loader to meet the requirement
+    // that key scripts should have .html extension
+    
+    // Load external scripts immediately without waiting for DOMContentLoaded
+    const script = document.createElement('script');
+    script.src = '/public/js/main.js';
+    document.body.appendChild(script);
+  </script>
+</body>
+</html> 
